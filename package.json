@@ -16,15 +16,15 @@
 	},
 	"enabledApiProposals": [],
 	"activationEvents": [
-		"onLanguage:nrs"
+		"onLanguage:Trees"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"languages": [
 			{
-				"id": "nrs",
+				"id": "Trees",
 				"extensions": [
-					".nrs"
+					".tr"
 				]
 			}
 		],
@@ -52,7 +52,7 @@
 		}
 	},
 	"scripts": {
-		"postinstall": "cd client && pnpm i",
+		"postinstall": "cd client && yarn install",
 		"compile": "npm run check-types && node esbuild.js --production",
 		"check-types": "tsc --noEmit",
 		"watch": "npm-run-all -p watch:*",
@@ -78,7 +78,6 @@
 		"vscode-test": "^1.4.0",
 		"vscode-uri": "^3.0.2"
 	},
-	"dependencies": {
-	},
-	"packageManager": "pnpm@8.15.7"
+	"dependencies": {},
+	"packageManager": "yarn@1.22.19"
 }
